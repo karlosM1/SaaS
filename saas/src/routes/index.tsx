@@ -11,6 +11,12 @@ const cardInfo = [
     percent: 12,
     description: "vs last month",
   },
+  {
+    title: "Total Inventory Value",
+    value: "8.4M",
+    percent: 12,
+    description: "vs last month",
+  },
 ];
 function Index() {
   return (

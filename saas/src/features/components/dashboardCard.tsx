@@ -13,7 +13,7 @@ export const DashboardCard: FC<TDashboardCard> = (
 ): ReactElement => {
   const { title, value, percent, description } = props;
   return (
-    <Card className="w-96 p-4">
+    <Card className="w-96 p-4 m-4">
       <CardHeader>
         <CardTitle className="font-light">{title}</CardTitle>
       </CardHeader>
