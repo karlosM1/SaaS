@@ -1,13 +1,29 @@
 import { createFileRoute } from "@tanstack/react-router";
-
+import { DashboardCard } from "../features/components/dashboardCard";
 export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const cardInfo = [
+  {
+    title: "Total Inventory Value",
+    value: "8.4M",
+    percent: 12,
+    description: "vs last month",
+  },
+];
 function Index() {
   return (
-    <div className="p-2">
-      <h3>Welcome Home!</h3>
-    </div>
+    <section className="flex flex-row">
+      {cardInfo.map((card, index) => (
+        <DashboardCard
+          key={index}
+          title={card.title}
+          value={card.value}
+          percent={card.percent}
+          description={card.description}
+        />
+      ))}
+    </section>
   );
 }
